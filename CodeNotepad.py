@@ -1,6 +1,7 @@
-#Started: May 14,2023
+#Started: May 24,2023
 
-#To run the code in python line, press **** shift + enter ****, to run the code in python file, press **** F5 ****
+#To run the code in python line, type python3 in bash or press **** shift + enter ****, to run the code in python file, press **** F5 ****
+#We can add a python file to the bash by typing **** python3 filename.py ****
 
 #Everytime that you want to find out about an error you are getting, you can copy and search it in google.
 #We can use # to comment in python. Also, if we want to comment a block of code, we can use ''' or """ at the beginning and end of the block of code. Also, we can use ctrl + / to comment a block of code.
@@ -9,6 +10,9 @@
 #We can not use space between names. We can use underscore instead of space.
 #We can not use python keywords as a variable name. for example: print, input, len, etc.
 #We can not use numbers at the beginning of the variable name. But we can use numbers in the middle or at the end of the variable name. 
+
+type(123) #it will tell us the type of the variable. for example: int, float, string, etc.
+#Outcome of adding an integer and a float is a float.
 
 print("Hello World!") #whole line is a statement. print is a function. Hello World! is an argument. we can have multiple arguments in a function. we call it a code block.
 
