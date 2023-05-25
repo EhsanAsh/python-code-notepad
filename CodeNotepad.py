@@ -11,6 +11,8 @@
 #We can not use python keywords as a variable name. for example: print, input, len, etc.
 #We can not use numbers at the beginning of the variable name. But we can use numbers in the middle or at the end of the variable name. 
 
+#---------------------------------------------------------------------------------------------------------
+
 type(123) #it will tell us the type of the variable. for example: int, float, string, etc.
 #Outcome of adding an integer and a float is a float.
 
@@ -24,6 +26,28 @@ print('Hello World!\nHello World!')
 # \n is used to print the next line. Also when we want the corsor to go to the next line, when we are gathering info from the user, we can use \n.
 
 print('Hello' + ' ' + 'Ehsan')
+
+#---------------------------------------------------------------------------------------------------------
+
+#Variables
+#Variable is a box that we can store something in it. we can use this box later in the code. we can change the content of the box later in the code.
+#we can use the variable name in the code instead of the content of the box.
+x = 123 #we can assign a value to a variable by using =. we can change the value of the variable later in the code.
+new_name = 'Ehsan' #we can use underscore instead of space.
+#Variables are case sensitive. name and Name are different variables.
+#Variables are iterable. we can use the content of the box repeatedly in the code, and Changeable. we can change the content of the box later in the code.***It means that  we can reassign a value to a variable.***
+#Variables can be assigned to other variables.****
+all, at, once = 5, 10, 15 #we can assign multiple variables at once.
+num_of_friends = 5
+num_of_friends = 8 #we can reassign a value to a variable.
+num_of_friends = num_of_friends + 1 #we can use the content of the box in the code.
+num_of_friends += 1 #we can use += to add 1 to the content of the box.
+num_of_friends -= 1 #we can use -= to subtract 1 from the content of the box.
+num_of_friends *= 2 #we can use *= to multiply the content of the box by 2.
+num_of_friends /= 2 #we can use /= to divide the content of the box by 2.
+friends = num_of_friends #we can assign a variable to another variable.
+
+#---------------------------------------------------------------------------------------------------------
 
 input('a prompt for the user: ')
 #it will print the prompt and wait for the user to enter something. After the user entered the answer, this answer will be replaced by that statement(code).
