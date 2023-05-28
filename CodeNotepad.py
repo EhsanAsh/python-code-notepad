@@ -123,18 +123,7 @@ input('a prompt for the user: ')
 #it will print the prompt and wait for the user to enter something. After the user entered the answer, this answer will be replaced by that statement(code).
 
 print('Hello' + ' ' + input('What is your name? '))
-#we can use input function inside the print function. it will print the prompt and wait for the user to enter something. After the user entered the answer, this answer will be replaced by that statement(code). Then it will print the rest of the statement.
-
-print(len(input('What is your name?')))
-#len is a function that will count the number of characters in the string. it will print the prompt and wait for the user to enter something. After the user entered the answer, this answer will be replaced by that statement(code). Then len will count the number of characters in the string and will be replaced by the number of characters. then print functuion will print the rest of the statement.
-
-name = input('What is your name? ')
-length = len(name)
-print(length)
-#Variable is a box that we can store something in it. we can use this box later in the code. we can change the content of the box later in the code.
-#we can use the variable name in the code instead of the content of the box.
-#Variables are case sensitive. name and Name are different variables.
-#Variables are iterable. we can use the content of the box in the code, and Changeable. we can change the content of the box later in the code.
+#we can use input function inside the print function. it will print the prompt and wait for the user to enter something. After the user entered the answer, this answer will be replaced by that statement(code). Then it will print the rest of the statement(code).
 
 temp = name
 name = length
@@ -154,4 +143,39 @@ str() #it is a built-in function. we can use it to convert a number to a string.
 help() #it is a built-in function. we can use it to find out how to use a specific method.
 round(thing to round , how many decimal points to rount it to) #it is a built-in function. we can use it to round a number.
 
-#-----------------------------------------STH---------------------------------------------
+#--------------------------------------Conditional Statements------------------------------------------
+
+#Conditional statements are used to make decisions. we can use if, elif, else to make decisions.
+if some condition is true:
+    #do something
+    #we can call values that are true, truthy and values that are false, falsy.
+    #the code inside the if statement is called a code block.
+    #There is just true or false not any other values or grey area.
+    # Besides 0, None, False, empty string, empty list, empty dictionary, empty set, everything else is true. They are naturally false.
+elif some other condition is true:
+    #do something
+    #we can have multiple elifs
+else:
+    #do something
+    
+car = input('What kind of car do you like?\n')
+if car:
+    print(f'I like {car} too!')
+else:
+    print('You did not say anything!')
+#We can use if statement to check if the user entered something or not(We are checking the truthiness and exitense of the entered car). If the user entered something, it will print the first statement. If the user did not enter anything(Python concider it as an empty string and by nature it's false.), it will print the second statement.
+    
+#--------------------------------------Coparison Operaters------------------------------------------
+
+#We can use comparison operators to compare two values.
+#We use them anywhere that we want to compare two values. Like inside if or elif statements.
+#We can use == to compare two values. for example: 1 == 1, 1 == 2, etc. it means that they are equal.
+#we can use != to compare two values. for example: 1 != 1, 1 != 2, etc. it means that they are not equal.
+# a > b, a < b, a >= b, a<=b. It means that a is greater than b, a is less than b, a is greater than or equal to b, a is less than or equal to b.
+
+#-----------------------------------------Logical Operaters--------------------------------------------
+
+age>2 and age<8 #it will return True if both of the conditions are true.
+age>2 or age<8 #it will return True if one of the conditions is true.
+
+#-----------------------------------------Logical Operaters2--------------------------------------------
