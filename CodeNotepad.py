@@ -38,7 +38,6 @@ print("Hello World!") #whole line is a statement. print is a function. Hello Wor
 #value is a piece of data that we can store in a variable. for example: 123, 3.14, "Hello World!", etc.
 
 #It will print everything in the brackets.
-#string is a sequence of characters(like a text), it is always in quotes.
 #we can use single quotes or double quotes. but if we have a single quote in the string, we have to use double quotes and vice versa. Also we can use triple quotes.
 
 print('Hello World!\nHello World!')
@@ -105,6 +104,18 @@ print(f'Hello {name}! Your guess is {guess}.')
 print('Hello {}! Your guess is {}.'.format(name, guess))#The older way to format a string.
 print(name+' '+str(guess))#The older way to concatenate two strings.
 
+#----------------------------------------------Index-----------------------------------------------------
+
+name = 'Ehsan'
+name[0] #it will print the first character of the string.
+#Index is the position of a character in a string. It starts from 0.
+name[-1] #it will print the last character of the string.
+
+#---------------------------------------Converting Data----------------------------------------------
+
+float(150) #it will convert the number to a float.
+int(3.14) #it will convert the number to an integer.
+str(99) #it will convert the number to a string.
 
 #----------------------------------------------Input-----------------------------------------------------
 
@@ -131,6 +142,16 @@ length = temp
 print(name,length)
 #By using this code, we can swap the content of the boxes.
 
+#-----------------------------------------Function types-------------------------------------------------
 
+print() #it is a built-in function. we can use it to print something.
+input() #it is a built-in function. we can use it to get input from the user.
+len() #it is a built-in function. we can use it to count the number of characters in a string.
+type() #it is a built-in function. we can use it to find out the type of the variable.
+int() #it is a built-in function. we can use it to convert a number to an integer.
+float() #it is a built-in function. we can use it to convert a number to a float.
+str() #it is a built-in function. we can use it to convert a number to a string.
+help() #it is a built-in function. we can use it to find out how to use a specific method.
+round(thing to round , how many decimal points to rount it to) #it is a built-in function. we can use it to round a number.
 
-      
+#-----------------------------------------STH---------------------------------------------
