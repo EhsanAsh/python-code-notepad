@@ -151,7 +151,7 @@ if some condition is true:
     #we can call values that are true, truthy and values that are false, falsy.
     #the code inside the if statement is called a code block.
     #There is just true or false not any other values or grey area.
-    # Besides 0, None, False, empty string, empty list, empty dictionary, empty set, everything else is true. They are naturally false.
+    # Besides 0, None, False, empty string, empty list, empty dictionary, empty set, everything else is true. They are naturally false.(We call them falsy values.)
 elif some other condition is true:
     #do something
     #we can have multiple elifs
@@ -164,8 +164,13 @@ if car:
 else:
     print('You did not say anything!')
 #We can use if statement to check if the user entered something or not(We are checking the truthiness and exitense of the entered car). If the user entered something, it will print the first statement. If the user did not enter anything(Python concider it as an empty string and by nature it's false.), it will print the second statement.
+
+#***If we want to check if user entered the answer or it's empty:***
+if answer:
+#or
+if answer !+'': 
     
-#--------------------------------------Coparison Operaters------------------------------------------
+#--------------------------------------Comparison Operaters------------------------------------------
 
 #We can use comparison operators to compare two values.
 #We use them anywhere that we want to compare two values. Like inside if or elif statements.
@@ -175,7 +180,16 @@ else:
 
 #-----------------------------------------Logical Operaters--------------------------------------------
 
-age>2 and age<8 #it will return True if both of the conditions are true.
-age>2 or age<8 #it will return True if one of the conditions is true.
+age>2 and age<8 #it will return True if both of the conditions are true. True and True = True, True and False = False, False and True = False, False and False = False.
+age>2 or age<8 #it will return True if one of the conditions is true. True or True = True, True or False = True, False or True = True, False or False = False.
 
 #-----------------------------------------Logical Operaters2--------------------------------------------
+
+not ((age>2 and age<=8) or age>=65) #it will return True if the condition is false. True = False, False = True. Let's say that age is 22, then the and statement will return false, and  age is not greater than or equal to 65, so the or statement will return false. So the whole statement will return True.
+
+#------------------------------------------is VS. == -------------------------------------------------------
+a=[1,2,3]
+b=[1,2,3]
+a==b #it will return True. It means that the values of a and b are equal.
+a is b #it will return False. It means that a and b are not the same object. They are two different objects that have the same value. They are two different boxes that have the same content, and their place in the memory is different.
+#We can use is to check if two variables are the same object or not. We can use == to check if two variables have the same value or not.
