@@ -170,6 +170,8 @@ if answer:
 #or
 if answer !+'': 
     
+if car == True: # it is as same as: if car: 
+    
 #--------------------------------------Comparison Operaters------------------------------------------
 
 #We can use comparison operators to compare two values.
