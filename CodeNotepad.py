@@ -252,5 +252,9 @@ import random
 random.randint(start,stop)
 #It will return a random number between start and stop. It includes both numbers.
 #The randint(a, b) method, specifically, is a function that's associated with the random module object, operating on the internal state of the random number generator contained within the random module. This internal state is the data that the randint method can operate on, consistent with your provided definition of a method.
+#****or****
+from random import randint
+randint(start,stop)
+# In this case we don't have to use random. we can use randint() directly.
 
 #-----------------------------------------while loop ------------------------------------------------------
