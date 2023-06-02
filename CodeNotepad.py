@@ -190,8 +190,20 @@ age>2 or age<8 #it will return True if one of the conditions is true. True or Tr
 not ((age>2 and age<=8) or age>=65) #it will return True if the condition is false. True = False, False = True. Let's say that age is 22, then the and statement will return false, and  age is not greater than or equal to 65, so the or statement will return false. So the whole statement will return True.
 
 #------------------------------------------is VS. == -------------------------------------------------------
+
 a=[1,2,3]
 b=[1,2,3]
 a==b #it will return True. It means that the values of a and b are equal.
 a is b #it will return False. It means that a and b are not the same object. They are two different objects that have the same value. They are two different boxes that have the same content, and their place in the memory is different.
 #We can use is to check if two variables are the same object or not. We can use == to check if two variables have the same value or not.
+
+#------------------------------------------randint() -------------------------------------------------------
+
+#The randint() method returns an integer number selected element from the specified range. The range includes both numbers.
+#We can use randint() to generate a random number.
+#We have to import random first.
+import random
+random.randint(start,stop)
+#It will return a random number between start and stop. It includes both numbers.
+
+#-----------------------------------------while loop ------------------------------------------------------
