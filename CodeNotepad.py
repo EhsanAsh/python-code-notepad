@@ -1,7 +1,6 @@
 #Started: May 24,2023
 
 #To run the code in python line, type python3 in bash , to run the code in python file, press **** Ctrl+F5 **** To exit the python line, type **** quit() or Ctrl+z+Enter****to open a vscode file in the bash, type **** code . filename.py ****to open a python file in the bash, type **** python3 filename.py ****
-#We can add a python file to the bash by typing **** python3 filename.py ****
 
 #Python is incredibly versatile and can be used for everything from web development to data science to machine learning.
 
@@ -9,6 +8,7 @@
 #But for example C++ is Statically typed. It means that we have to specify the type of the variable. for example: int x = 123, string x = 'Ehsan', etc.
 
 #Everytime that you want to find out about an error you are getting, you can copy and search it in google.
+
 #We can use # to comment in python. Also, if we want to comment a block of code, we can use ''' or """ at the beginning and end of the block of code. Also, we can use ctrl + / to comment a block of code.
 
 #---------------------------------------------Python Components-------------------------------------------
@@ -214,9 +214,14 @@ else:
 #***If we want to check if user entered the answer or it's empty:***
 if answer:
 #or
-if answer !+'': 
+if answer !='' : #it means that answer is not empty.
     
-if car == True: # it is as same as: if car: 
+#***Sometimes we check if answer is empty or not and sometimes we check if answer is true or not.***
+#***If we want to check if answer is empty or not:***
+if answer:
+
+# if we want to check if answer is true or not:
+if answer == True: 
     
 #--------------------------------------Comparison Operaters------------------------------------------
 
@@ -257,4 +262,9 @@ from random import randint
 randint(start,stop)
 # In this case we don't have to use random. we can use randint() directly.
 
-#-----------------------------------------while loop ------------------------------------------------------
+#------------------------------------------lowe() -------------------------------------------------------
+
+name = input('What is your name?\n').lower()
+# .lower() is a string method. we can use it to convert a string to lowercase.
+
+#-----------------------------------------Loops ------------------------------------------------------
