@@ -3,11 +3,57 @@
 #To run the code in python line, type python3 in bash or press **** shift + enter ****, to run the code in python file, press **** F5 ****
 #We can add a python file to the bash by typing **** python3 filename.py ****
 
+#Python is incredibly versatile and can be used for everything from web development to data science to machine learning.
+
 #Python is Dynamically typed. It means that we don't have to specify the type of the variable. We can change the type of the variable later in the code. for example: x = 123, x = 'Ehsan', etc.
 #But for example C++ is Statically typed. It means that we have to specify the type of the variable. for example: int x = 123, string x = 'Ehsan', etc.
 
 #Everytime that you want to find out about an error you are getting, you can copy and search it in google.
 #We can use # to comment in python. Also, if we want to comment a block of code, we can use ''' or """ at the beginning and end of the block of code. Also, we can use ctrl + / to comment a block of code.
+
+#---------------------------------------------Python Components-------------------------------------------
+
+#Python, like many other programming languages, is composed of various components and parts. Here are some key components:
+
+#Variables: Variables are containers for storing data values. In Python, variables do not need explicit declaration to reserve memory space. The declaration happens automatically when a value is assigned to a variable.
+
+#Data Types: Python has several built-in data types. These include integers (int), floating point numbers (float), complex numbers (complex), strings (str), lists (list), tuples (tuple), dictionaries (dict), and sets (set).
+
+#Operators: Operators are used to perform operations on variables and values. Python includes arithmetic operators (+, -, *, /, %, **, //), comparison operators (==, !=, >, <, >=, <=), assignment operators (=, +=, -=, *=, /=, etc.), logical operators (and, or, not), and more.
+
+#Statement: A statement in Python is a logical instruction which the Python interpreter can read and execute. In simple terms, a statement is a single line of code that performs a specific task. Examples of statements include assignment statements like x = 5, control flow statements like if, for, while, function definitions, and more.
+
+#Expression: An expression is a combination of values, variables, operators, and function calls, which are evaluated by Python's interpreter to produce a value. Examples include 2 + 2, x * y, len("hello"). The key point is that expressions are evaluated to a value.
+
+#Value: A value is the most basic form of data that a program works with. It could be a number (like 5, 10.5), a string ("Hello World"), a list ([1, 2, 3]), or many other things. Values belong to different data types: 2 is an integer, Hello, World! is a string, etc.
+
+#Argument: An argument (or parameter) is a value that is passed to a function or method when it is called. For example, in len("hello"), "hello" is an argument being passed to the len function. Arguments are essentially inputs to functions and methods which they use to perform their tasks.
+
+#Control Flow: This includes if-else statements, while loops, and for loops, which allow the code to make decisions and repeat actions.
+
+#Functions: Functions are reusable pieces of code that perform a specific task. You can define your own functions using the def keyword, and Python has a number of built-in functions like print(), len(), etc.
+
+#Methods: Methods are like functions, but they're associated with object/classes. Methods in objects are functions that belong to the object.
+
+#Classes and Objects: Python is an object-oriented programming language. You can define your own objects using classes, which can have their own attributes and methods.
+
+#Modules and Packages: Modules are pieces of code that you can import into your program. A package is a way of organizing related modules into a directory hierarchy.
+
+#Exceptions: Exceptions are events that occur during the execution of a program that disrupt the normal flow of a program's instructions. Python has several built-in exceptions that can be handled with try/except statements, and you can define your own.
+
+#Decorators: Decorators allow you to wrap a function or method in another function that can add functionality, modify arguments or results, etc.
+
+#Generators: Generators are a type of iterable, like lists or tuples. Unlike lists, they don't allow indexing with arbitrary indices, but they can still be iterated through with for loops. They are created using functions and the yield statement.
+
+#List Comprehensions: Python supports list comprehensions, which provide a concise way to create lists based on existing lists.
+
+#Context Managers: Context managers allow setup and cleanup actions to be taken for objects when their creation and destruction times are not predictable. They're created using the with statement.
+
+#AsyncIO: This is a library to write single-threaded concurrent code using coroutines, multiplexing I/O access over sockets and other resources, running network clients and servers, and other related primitives.
+
+#File I/O: Python has several functions for creating, reading, writing, and deleting files.
+
+#These are just some of the components and parts of Python. 
 
 #---------------------------------------------How to write codes-------------------------------------------
 
@@ -205,5 +251,6 @@ a is b #it will return False. It means that a and b are not the same object. The
 import random
 random.randint(start,stop)
 #It will return a random number between start and stop. It includes both numbers.
+#The randint(a, b) method, specifically, is a function that's associated with the random module object, operating on the internal state of the random number generator contained within the random module. This internal state is the data that the randint method can operate on, consistent with your provided definition of a method.
 
 #-----------------------------------------while loop ------------------------------------------------------
