@@ -1,6 +1,6 @@
 #Started: May 24,2023
 
-#To run the code in python line, type python3 in bash or press **** shift + enter ****, to run the code in python file, press **** F5 ****
+#To run the code in python line, type python3 in bash , to run the code in python file, press **** Ctrl+F5 **** To exit the python line, type **** quit() or Ctrl+z+Enter****to open a vscode file in the bash, type **** code . filename.py ****to open a python file in the bash, type **** python3 filename.py ****
 #We can add a python file to the bash by typing **** python3 filename.py ****
 
 #Python is incredibly versatile and can be used for everything from web development to data science to machine learning.
