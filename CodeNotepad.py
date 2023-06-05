@@ -2,6 +2,8 @@
 
 #To run the code in python line, type python3 <file-name>(you should be in the same directory or mention the directory) in bash , to run the code in python file, press **** Ctrl+F5 **** To exit the python line, type **** quit() or Ctrl+z+Enter****to open a python command line type python3 in teminal****to open a vscode file in the bash, type **** code . filename.py ****to open a python file in the bash, type **** python3 filename.py ****
 
+#To break a while loop, when we are running the code in python line, we can press Ctrl+c.
+
 #Python is incredibly versatile and can be used for everything from web development to data science to machine learning.
 
 #Python is Dynamically typed. It means that we don't have to specify the type of the variable. We can change the type of the variable later in the code. for example: x = 123, x = 'Ehsan', etc.
@@ -177,6 +179,11 @@ length = temp
 print(name,length)
 #By using this code, we can swap the content of the boxes.
 
+#----------------------------------------------Hint-----------------------------------------------------
+
+name = input()
+#an empty input is a falsy value. here it will give the user a chance to enter the answer again or a cursor.
+
 #-----------------------------------------Function types-------------------------------------------------
 
 print() #it is a built-in function. we can use it to print something.
@@ -234,11 +241,12 @@ if answer == True:
 #-----------------------------------------Logical Operaters--------------------------------------------
 
 age>2 and age<8 #it will return True if both of the conditions are true. True and True = True, True and False = False, False and True = False, False and False = False.
+
 age>2 or age<8 #it will return True if one of the conditions is true. True or True = True, True or False = True, False or True = True, False or False = False.
 
-#-----------------------------------------Logical Operaters2--------------------------------------------
-
 not ((age>2 and age<=8) or age>=65) #it will return True if the condition is false. True = False, False = True. Let's say that age is 22, then the and statement will return false, and  age is not greater than or equal to 65, so the or statement will return false. So the whole statement will return True.
+#Logical operators are used to combine conditional statements. We can use not, and, or to combine conditional statements.
+#Logical are used to make boolean, logical comparisons or statements.
 
 #------------------------------------------is VS. == -------------------------------------------------------
 
@@ -262,10 +270,12 @@ from random import randint
 randint(start,stop)
 # In this case we don't have to use random. we can use randint() directly.
 
-#------------------------------------------lower() -------------------------------------------------------
+#------------------------------------------String Method -------------------------------------------------------
 
 name = input('What is your name?\n').lower()
 # .lower() is a string method. we can use it to convert a string to lowercase.
+#.upper() is a string method. we can use it to convert a string to uppercase.
+#.capitalize() is a string method. we can use it to capitalize the first letter of a string.
 
 #-----------------------------------------For Loops ------------------------------------------------------
 for item in iterable_object:
@@ -274,7 +284,7 @@ for item in iterable_object:
     #item is a variable that we can use in the code block.
     #item changes in every iteration.
     #after it's done the item will go away.
-    
+   
 for number in range(1, 11):
     print(number)
     #range is a built-in function. it will return a range of numbers.
@@ -289,3 +299,108 @@ for i in range(11, 21, 2):
     x += i
     print(x)  
     #it will print the sum of odd numbers from 11 to 20. each time it will add the next odd number to the previous sum and print the new sum till it reaches 20.
+    
+#for nested loops:
+from emoji import emojize
+for repeat in range(3):
+    for emoji in range(1, 11):
+        print(emojize(':grinning_face:'*emoji))
+    
+    #---------------------------------------Import and use Emojis -------------------------------------------
+    
+    #We can use emojis in python. we have to install and import emoji first.
+    #to install: pip3 install emoji
+    from emoji import emojize
+    #then we have to use emojize() function to use emojis.
+    print(emojize(':thumbs_up:'))
+    #we can find the list of emojis in:
+    #https://www.webfx.com/tools/emoji-cheat-sheet/
+
+    #To upgrade:
+    #pip install --upgrade emoji
+    #"/c/Users/ehsan/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/python.exe" -m pip install --upgrade pip
+    
+    #---------------------------------------Hint-----------------------------------------------------------
+    
+    # if you see that you are repeating a function too many times, you may can use sth else.
+    #for example:
+ for x in range(1, 21):
+    if x == 4 or x == 13:
+        print(f'{x} is Unlucky number. :( ')
+    elif x % 2 == 0 and x != 4:
+        print(f'{x} is Even number. :)')
+    else:
+        print(f'{x} is Odd number. :)')
+        
+# Option2
+
+for x in range(1, 21):
+    if x == 4 or x == 13:
+        state = 'Unlucky'
+    elif x % 2 == 0 and x != 4:
+        state = 'Even'
+    else:
+        state = 'Odd'
+    print(f'{x} is {state} number. :)')
+    
+    #-----------------------------------------While Loops ------------------------------------------------------
+    
+    while some condition is true:
+    #do something
+    #we can use while loop to repeat a code block as long as a condition is true.
+    #we can use break to exit the loop.
+    #we can use continue to skip the rest of the code block and go to the next iteration.
+    #we can use else to run a code block after the loop is finished.
+        
+    user_response = None
+    while user_response != 'please':
+        user_response = input('Ah ah ah, you didn\'t say the magic word:\n')
+    #we should be careful about infinite loops. we should make sure that the condition will be false at some point.
+    #we should make sure that we have a variable that will change in every iteration.
+    
+    #**** The difference between if, for and while loops:****
+    #for loop is used to iterate over a sequence. for example: list, string, etc.
+    #while loop is used to repeat a code block as long as a condition is true.
+    #if condition is used to check if a condition is true or not just once.
+    
+    #for example:
+    
+    for num in range(1, 11):
+        print(num)
+        #it will print numbers from 1 to 10.
+        
+    num=1
+    while num < 11:
+        print(num)
+        num += 1
+        
+#To Break a while or for loop:
+while True:
+    command = input('Type "exit" to exit: ')
+    if (command == 'exit'):
+        break
+    else:
+        print(f'You typed {command}')
+    #It will keep asking the user to enter the command. If the user entered exit, it will break the loop and exit the loop. If the user entered sth else, it will print the command and ask the user to enter the command again.
+    
+for x in range(1,101):
+    print(x)
+    if x==7:
+        break
+    
+#-----------------------------------------Nice Example------------------------------------------------------
+
+repeat = input('Hey how is it going?\n').lower()
+while repeat != 'stop copying me':
+    repeat = input(f'{repeat}\n').lower()
+print('UGH FINE YOU WIN')
+
+angry = int(input('How many times should I ask you to clean the washroom?\n'))
+for angry in range(angry):
+    print('Clean the washroom!')
+    if angry > 2:
+        print("That's it! I'm done")
+        break
+
+#-----------------------------------------e------------------------------------------------------
+    
