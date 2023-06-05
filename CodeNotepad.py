@@ -1,6 +1,6 @@
 #Started: May 24,2023
 
-#To run the code in python line, type python3 in bash , to run the code in python file, press **** Ctrl+F5 **** To exit the python line, type **** quit() or Ctrl+z+Enter****to open a vscode file in the bash, type **** code . filename.py ****to open a python file in the bash, type **** python3 filename.py ****
+#To run the code in python line, type python3 <file-name>(you should be in the same directory or mention the directory) in bash , to run the code in python file, press **** Ctrl+F5 **** To exit the python line, type **** quit() or Ctrl+z+Enter****to open a python command line type python3 in teminal****to open a vscode file in the bash, type **** code . filename.py ****to open a python file in the bash, type **** python3 filename.py ****
 
 #Python is incredibly versatile and can be used for everything from web development to data science to machine learning.
 
@@ -11,7 +11,7 @@
 
 #We can use # to comment in python. Also, if we want to comment a block of code, we can use ''' or """ at the beginning and end of the block of code. Also, we can use ctrl + / to comment a block of code.
 
-#---------------------------------------------Python Components-------------------------------------------
+#---------------------------------------------Python Components-----------------------------------------
 
 #Python, like many other programming languages, is composed of various components and parts. Here are some key components:
 
@@ -262,9 +262,30 @@ from random import randint
 randint(start,stop)
 # In this case we don't have to use random. we can use randint() directly.
 
-#------------------------------------------lowe() -------------------------------------------------------
+#------------------------------------------lower() -------------------------------------------------------
 
 name = input('What is your name?\n').lower()
 # .lower() is a string method. we can use it to convert a string to lowercase.
 
-#-----------------------------------------Loops ------------------------------------------------------
+#-----------------------------------------For Loops ------------------------------------------------------
+for item in iterable_object:
+    #do something with item
+    #an iterable object is a collection of items. for example: list, string, etc.
+    #item is a variable that we can use in the code block.
+    #item changes in every iteration.
+    #after it's done the item will go away.
+    
+for number in range(1, 11):
+    print(number)
+    #range is a built-in function. it will return a range of numbers.
+    # range (stop) like range(7) will return 0 to 6, excluding 7.
+    # range(start,stop) like range(1,7) will return 1 to 6, excluding 7.
+    #range(start, stop, step) like range(1, 7, 2) will return 1, 3, 5.
+    #range(stop, start, step) like range(7, 1, -1) will return 7, 6, 5, 4, 3, 2.
+    #range(variable) like range(number).
+    
+x=0
+for i in range(11, 21, 2):
+    x += i
+    print(x)  
+    #it will print the sum of odd numbers from 11 to 20. each time it will add the next odd number to the previous sum and print the new sum till it reaches 20.
