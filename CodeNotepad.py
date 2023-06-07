@@ -288,8 +288,8 @@ for item in iterable_object:
 for number in range(1, 11):
     print(number)
     #range is a built-in function. it will return a range of numbers.
-    # range (stop) like range(7) will return 0 to 6, excluding 7.
-    # range(start,stop) like range(1,7) will return 1 to 6, excluding 7.
+    #range (stop) like range(7) will return 0 to 6, excluding 7.
+    #range(start,stop) like range(1,7) will return 1 to 6, excluding 7.
     #range(start, stop, step) like range(1, 7, 2) will return 1, 3, 5.
     #range(stop, start, step) like range(7, 1, -1) will return 7, 6, 5, 4, 3, 2.
     #range(variable) like range(number).
@@ -401,6 +401,8 @@ for angry in range(angry):
     if angry > 2:
         print("That's it! I'm done")
         break
+    
+#******check the guessing_game.py file for a nice example.******
 
 #-----------------------------------------e------------------------------------------------------
     
