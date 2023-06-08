@@ -404,5 +404,44 @@ for angry in range(angry):
     
 #******check the guessing_game.py file for a nice example.******
 
-#-----------------------------------------e------------------------------------------------------
+#-----------------------------------------List------------------------------------------------------
+
+#List is a collection of items. It is always in square brackets and items are separated by commas.
+#List is iterable. we can use the content of the box repeatedly in the code, and Changeable. we can change the content of the box later in the code.
+#List can be assigned to other lists.
+
+#List can have different data types. such as: int, float, string, list, etc.
+names = ['Ehsan', 'Ash', 'Shayan']
+demo_list = ['a', 1, 3.14, True, [1, 2, 3]]
+
+#we can also add variables to a list.
+name1 = 'Ehsan'
+name2 = 'Ash'
+name3 = 'Shayan'
+namess = [name1, name2, name3]
+
+#we can use len() to find out the length of a list. like we do for strings.
+len(namess)
+#The answer will be 3. because we have 3 items in the list.
+
+#if we want to convert any variable to a list, we can use list() function.
+#we can use list() to convert a string to a list.
+r = range(1, 10)
+r_list = list(r)
+#or
+r_list = list(range(1, 10))
+
+#***Accessing items in a list:***
+#we can use index to access items in a list. index starts from [0].
+names[0] #it will print the first item in the list.(Ehsan)
+#we can also use index as a value of a variable.
+best_friend = names[1]
+#*****By doing this, we can retrieve a value of a list.*****
+
+#if we wnt to check if a value is in a list or not, we can use in.
+'Ehsan' in names #it will return True.
+#we can use not in to check if a value is not in a list.
+if 'Ehsan' not in names:
+    print('Ehsan is not in the list.')
     
+#***Iterating over a list:***
