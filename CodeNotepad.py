@@ -445,3 +445,126 @@ if 'Ehsan' not in names:
     print('Ehsan is not in the list.')
     
 #***Iterating over a list:***
+
+nums = [1,2,3,4]
+for num in nums:
+    print(num)
+#It will iterate over the list
+
+letters = ['A','D','F','R']
+idx = 0 #stands for index
+while idx < len(letters):
+    print(letters[idx])
+    idx +=1
+    
+#if we want to use the list just to get sth it's better to use it with for loop like above. but for example in the above situation if we want to print every index with it's related index number we have to use while loop like this:
+
+letters = ['A','D','F','R']
+idx = 0 #stands for index
+while idx < len(letters):
+    print(f'{idx}: {letters[idx]}')
+    idx +=1
+    
+#**********Example**********
+
+names = ['ehsan','arash','amy','sein','belma']
+result = ''
+for n in names:
+    result += n.upper()
+#in every loop it will add one of names to result in uppercase
+
+#-----------------------------------------------List Methods--------------------------------------------
+
+#Methods: Methods are like functions, but they're associated with object/classes. Methods in objects are functions that belong to the object.
+
+test = [2,4.5,True,'Ash',11,'a','a','a']
+test.append(5) #append is a function which belongs to list as an object. Thus, it's a Method.
+#append will add anything that we mention between parentheses, to the end of the list.
+#append just gets one argument.
+
+test.extend([7,'i',8])
+#extend will solve the problem. by usying extend we can add a list or multiple arguments.
+
+test.insert(2, 'Ehsan')
+#The first value is the index number that we want to target and the 2nd one is the value that we want to add.
+ 
+test.clear()
+#It will delete all the contents.
+
+test.pop()#It will remove the last item by default
+test.pop(1)#The number inside is the index number of the value that we want to be ommited
+#the thing is after we deleted a particulare value, by using pop, the computer will keep it for us, so if we want we can return the deleted value and keep it in anouther variable:
+test_storage = test.pop(2)
+#it will remove the index two value in test and then restore it in test_storage.
+   
+test.remove(a)
+#it will remove the first "a" value that it finds.
+#it's useful when we are not sure about the index of an argument that we want to be removed.
+#it does not return the value that was removed. 
+
+test.index(2)
+#the value inside is the value we are looking for, and the answer will be the index number of that specific value.
+test.index('Ash') # index 3
+test.index('Ash',1,5)
+#value, starting index, ending index****** it will look out for value 'Ash', starting from index one to 5. Answer = 3
+
+test.count('a')
+# it will count times that a has been printed which is 3.
+
+test.reverse()
+#it will reverse the list and update it.
+
+num = [6,4,5,2,1]
+num.sort()
+#it will sort the list in ascending order. answer [1,2,4,5,6]
+#we can sort string too, it will do it alphabetical, and in case of same names if one of the is in uppercase, priority is with that one.
+
+#.join(), it's actually a list method which commonly used to concatenate different values of a list, by the rule that we define(like space, dot or a sentence), and *RETURNs* a new string out of that list, which we can use it in a variable.
+words = ['He', 'is', 'the', 'best.']
+' '.join(words) # 'He is the best.' ---- the object before dot is the rule that we define, and the variable that we want to be joint is in the parentheses. the rule here is spacing. we also can use '. '
+sentence = ', '.join(words)
+#it concatenate all words and make a sentence as we mentioned by the rule that we defined, and then store it in another variable called sentence
+
+#*******Slicing*******
+
+#it can be used with strings as well.
+#for slicing a list from a start to an end point we use square brackets alongside of a list name(like an index), and we seperate them with colons.
+#the order is like this: test[start:end:step]
+new = test[1,5,2] # answer: new == [4.5, 'Ash', 'a']
+new2 = test[1:] # It starts from index one and goes forward till the end with one step each time.
+new3 = test[-1:] # it starts from last item to the end(which is none).we can use ane negative number. for example by using -2 it starts for the value prior to the last one.
+# ******It's important to understand that it will keep a copy of what we are slicing it doesn't change the original one.
+new4 = test[:] # it copies the same list
+#if we run new4 == test it's True but if we run new4 is test it's False because it's actually a copy of the original list which is test in this case.
+
+portion = test[:2] # it will start from the 0 index to the number 2 index(third value) by one step. but the ****end index is EXCLUSIVE****like range
+portion2 = test[1:3] # start and end
+portion3 = test[1:-1]# starts from index number 1 up to exclusive index -1
+portion4 = test[::2] # it goes from index 0 up to the last one by 2 steps each time.
+portion5 = test[1::2]
+
+numss = [1,2,3,4,5,6]
+numss1 = numss[1::-1]# numss1==[2,1] it says start should be index to till the end but with -1 steps
+numss2 = numss[:1:-1]# numss2==[6,5,4,3] it says end should be index 1(with end specifications) to start but with -1 steps. so the start will be 6 up to exclusive index1 which is 2
+numss3 = numss[2::-1]# numss3==[3,2,1]
+
+#***Reversing string or list by -1 steps:
+string = 'Programming is fun!'
+string[::-1]
+
+#****Modifying portins of list:
+
+adad = [1,2,3,4,5,6]
+adad[1:3] = [a,b,c]
+print(adad)# answer is: [1,a,b,c,4,5,6] --- it will replace 2 and 3 with a,b,c because we asked to start from index one up to index 3 which is 4(not included) and replace them with 2nd list
+
+#*****IMPORTANT/ picking a value in an index and reverse it or do sth else:
+esmha = ['Ehsan','Amy','EhsanAsh','AmyDil']
+esmha2 = esmha[2][::-1]
+print(esmha2)# it will pick index 2 from esmha and then because we used slicing by step -1, it will reverse it and the answer is: 'hsAnashA'
+
+'eeehsasaaaaan'[::3]# answer is: ehsan
+
+# ********Swaping*******
+names = ['Shiraz','Tehran','Abadan']
+names[0], names[2] = names [2], names[0]
