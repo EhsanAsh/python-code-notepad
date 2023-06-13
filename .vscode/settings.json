@@ -3,7 +3,6 @@
     "workbench.colorTheme": "Solarized Light",
     "editor.wordWrap": "on",
     "editor.inlineSuggest.enabled": true,
-    "editor.parameterHints.enabled": true,
     "remote.SSH.remotePlatform": {},
     "settingsSync.ignoredSettings": [
         "configurationSync.store",
