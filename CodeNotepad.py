@@ -281,7 +281,7 @@ name = input('What is your name?\n').lower()
 for item in iterable_object:
     #do something with item
     #an iterable object is a collection of items. for example: list, string, etc.
-    #item is a variable that we can use in the code block.
+    #item is a place holder variable that we can use in the code block.
     #item changes in every iteration.
     #after it's done the item will go away.
    
@@ -568,3 +568,7 @@ print(esmha2)# it will pick index 2 from esmha and then because we used slicing 
 # ********Swaping*******
 names = ['Shiraz','Tehran','Abadan']
 names[0], names[2] = names [2], names[0]
+
+#***********************List Comprehension********************#
+
+# to have 
