@@ -570,5 +570,3 @@ names = ['Shiraz','Tehran','Abadan']
 names[0], names[2] = names [2], names[0]
 
 #***********************List Comprehension********************#
-
-# to have 
