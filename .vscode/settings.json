@@ -1,0 +1,48 @@
+{
+    "files.autoSave": "onFocusChange",
+    "workbench.colorTheme": "Solarized Light",
+    "editor.wordWrap": "on",
+    "editor.inlineSuggest.enabled": true,
+    "remote.SSH.remotePlatform": {},
+    "settingsSync.ignoredSettings": [
+        "configurationSync.store",
+        "-window.zoomLevel",
+        "-remote.tunnels.access.preventSleep"
+    ],
+    "configurationSync.store": {},
+    "remote.tunnels.alwaysUpdateCLI": true,
+    "editor.formatOnType": true,
+    "editor.fontSize": 18,
+    "editor.fontFamily": "verdana",
+    "terminal.integrated.fontFamily": "monospace",
+    "git.enableSmartCommit": true,
+    "diffEditor.renderSideBySide": false,
+    "git.autofetch": true,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "gitlens.views.repositories.branches.layout": "list",
+    "git.confirmSync": false,
+    "editor.formatOnSave": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.bracketPairColorization.enabled": true,
+    "prettier.bracketSameLine": true,
+    "editor.mouseWheelZoom": true,
+    "terminal.integrated.automationProfile.linux": null,
+    "editor.stickyScroll.maxLineCount": 3,
+    "codesnap.backgroundColor": "#d0f4de",
+    "codesnap.boxShadow": "rgba(0, 0, 0, 0.55) 0px 50px 60px",
+    "codesnap.containerPadding": "1em",
+    "codesnap.realLineNumbers": true,
+    "codesnap.showWindowTitle": true,
+    "editor.wordWrapColumn": 60,
+    "editor.stickyScroll.enabled": true,
+    "diffEditor.codeLens": true,
+    "workbench.commandPalette.experimental.suggestCommands": true,
+    "debug.autoExpandLazyVariables": true,
+    "remote.tunnels.access.preventSleep": true,
+    "settingsSync.ignoredExtensions": []
+}
