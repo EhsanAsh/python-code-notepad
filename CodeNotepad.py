@@ -570,3 +570,56 @@ names = ['Shiraz','Tehran','Abadan']
 names[0], names[2] = names [2], names[0]
 
 #***********************List Comprehension********************#
+num = [1,2,3,4,5,6]
+num_new = [x*10 for x in num] 
+# the simple shape is like this: [___ for ___ in ___]  first parameter is the value that we want to be returned, it can be anything like just a variable all another list with different content, the second one is the place holder variable and the third one is the iterable object that we want to iterate over it, like a list or a string, range, logic statement, etc.
+print(num_new)
+# it will multiply each number in range 5 by 10 and return a new list of them.
+# first value is the value that we want to be returned, and the second one (x) is the place holder variable and the third one is the iterable object that we want to iterate over it.
+name = 'Ehsan'
+[letter.upper() for letter in name]# ['E', 'H', 'S', 'A', 'N']
+# it will return a list of uppercase letters of name.
+friends = ['ash','shayan','ehsan','amy']
+[friends[0].upper() for friend in friends]# ['Ash', 'Shayan', 'Ehsan', 'Amy']
+# it will return a list of uppercase letters of friends.
+[num*10 for num in range(1,6)]# [10, 20, 30, 40, 50]
+
+#********Important********
+[bool(val) for val in [ 0, '', [] ]] # [False, False, False]
+
+numbers = [1,2,3,4,5,6]
+string_list = [str(num) for num in numbers] # ['1', '2', '3', '4', '5', '6']
+#or:
+string_list = [str(num) + 'Hello' for num in numbers] # ['1Hello', '2Hello', '3Hello', '4Hello', '5Hello', '6Hello']
+
+#********************List Comprehension with Conditional Logic*******************#
+
+numbers = [1,2,3,4,5,6]
+evens = [num for num in numbers if num % 2 ==0] # [2, 4, 6]
+odds = [num for num in numbers if num % 2 !=0] # [1, 3, 5]
+#or:
+ev_od = [num*2 if num % 2 == 0 else num/2 for num in numbers] # [0.5, 4, 1.5, 8, 2.5, 12]
+# we can use if else in list comprehension. if the condition is true, it will do the first thing, if it's false, it will do the second thing.
+# we can read it like this: for num in numbers, if num % 2 == 0, multiply num by 2, else divide num by 2.
+with_vowels = 'This is so much fun!'
+' '.join(char for char in with_vowels if char not in 'aeiou') # 'Ths s s mch fn!'
+# it will remove all the vowels from the string.
+
+#*********************Nested Lists******************************#
+
+nested_list = [ [1,2,3], [4,5,6], [7,8,9] ]
+nested_list[0][1] # 2
+
+for num in nested_list:
+    for val in num:
+        print(val)
+# it will print all the values in the nested list.
+
+#****Nested List Comprehension*****#
+[ [print(val) for val in num] for num in nested_list]
+
+[ [num for num in range(1,4)] for val in range(1,4)]
+# [[1, 2, 3], [1, 2, 3], [1, 2, 3]]
+
+[ ['X' if x % 2 != 0 else 'O' for x in range(1,4) ] for val in range(1,4)]
+# [['X', 'O', 'X'], ['X', 'O', 'X'], ['X', 'O', 'X']]
