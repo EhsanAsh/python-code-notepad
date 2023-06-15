@@ -518,6 +518,11 @@ num = [6,4,5,2,1]
 num.sort()
 #it will sort the list in ascending order. answer [1,2,4,5,6]
 #we can sort string too, it will do it alphabetical, and in case of same names if one of the is in uppercase, priority is with that one.
+num.sort(reverse=True)
+#it will sort the list in descending order. answer [6,5,4,2,1]
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort(key=str.lower)
+#It's a case insensitive sort. It will sort the list in alphabetical order, but it will ignore the case. answer ['banana', 'cherry', 'Kiwi', 'Orange']
 
 #.join(), it's actually a list method which commonly used to concatenate different values of a list, by the rule that we define(like space, dot or a sentence), and *RETURNs* a new string out of that list, which we can use it in a variable.
 words = ['He', 'is', 'the', 'best.']
