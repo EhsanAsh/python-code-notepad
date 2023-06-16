@@ -628,3 +628,72 @@ for num in nested_list:
 
 [ ['X' if x % 2 != 0 else 'O' for x in range(1,4) ] for val in range(1,4)]
 # [['X', 'O', 'X'], ['X', 'O', 'X'], ['X', 'O', 'X']]
+
+#*********************Dictionaries******************************#
+
+#Dictionary is a collection of key value pairs. It is always in curly brackets.
+
+developer = {'name': 'Ehsan', 'age': 30, 'is_developer': True, 77: 'my favorite number'}
+#name, age, is_developer are keys and Ehsan, 30, True are values.
+#keys are unique. we can not have two keys with the same name.
+#keys are immutable. we can not use a list as a key. we can use a tuple as a key.
+#values can be anything. they can be mutable or immutable. they can be a list, a dictionary, a tuple, etc.
+#like lists, dictionaries are iterable and changeable.
+#we can use any data type for values but for keys we mostly use strings and numbers.
+
+# There is another way to create a dictionary:
+developer2 = dict(name='Ehsan', age=30, is_developer=True, favorite_number=77)
+#we can use dict() to create a dictionary. we can use it to convert a list of tuples to a dictionary.
+
+#if we want to access a value in a dictionary, we can use the key. Like a dictionary, we can use the key to access the value.
+developer['name'] # it will return Ehsan.
+
+#********Looping over a dictionary:********
+
+#for above dictionary:
+#in order to loop over a dictionary, we have to use .values() method. it will return the values of the dictionary.
+for value in developer.values():
+    print(value)
+    
+for key in developer.keys():
+    print(key)
+#it will return the keys of the dictionary.
+
+for key, value in developer.items():
+    print(f'key is {key} and value is {value}')
+#it will return the keys and values of the dictionary.
+#dict.items returns a list of tuples. each tuple is a key value pair.
+#since we want both key and value, we have to use two variables in the for loop. the name is not important but the order is important. the first variable is the key and the second variable is the value. we can use k,v instead of key, value.
+
+#to test existence of a key in a dictionary:
+'name' in developer # it will return True.
+44 in developer # it will return False.
+
+#to test existence of a value in a dictionary:
+30 in developer.values() # it will return True.
+"arash" in developer.values() # it will return False.
+
+#*******Dictionary Methods:*******
+
+empty = developer.clear() # answer is: {}
+copy = developer.copy() # it will copy the dictionary and store it in copy.They are equal but they are two different objects.
+copy == developer # it will return True.
+copy is developer # it will return False.
+
+new = dict.fromkeys(['name', 'age', 'is_developer'], 'unknown') # we can also use None instead of 'unknown' answer is: {'name': 'unknown', 'age': 'unknown', 'is_developer': 'unknown'}
+#it will create a dictionary with the keys that we mentioned and the values that we mentioned.
+#we can use dict.fromkeys() to create a dictionary with the keys that we mentioned and the values that we mentioned.
+#it will be useful when we want to create a dictionary with the same values for all the keys like in a game.
+new2 = dict.fromkeys(range(1,10), None)# answer is: {1: None, 2: None, 3: None, 4: None, 5: None, 6: None, 7: None, 8: None, 9: None}
+#we can use range too.
+
+retrieve = developer.get('name') # it will return Ehsan.
+#.get() method:
+#get() method is used to retrieve a key. it will return None if the key does not exist.
+r2 = developer.get('names') # it will return None. it will not give us an error when a key does not exist. ******* it's not like developer['names'] which will give us an error.******
+#********Example********
+game_properties = ["current_score", "high_score", "number_of_lives", "items_in_inventory", "power_ups", "ammo",
+                   "enemies_on_screen", "enemy_kills", "enemy_kill_streaks", "minutes_played", "notifications", "achievements"]
+initial_game_state = dict.fromkeys(game_properties, 0)
+print(initial_game_state)
+# answer: {'current_score': 0, 'high_score': 0, 'number_of_lives': 0, 'items_in_inventory': 0, 'power_ups': 0, 'ammo': 0, 'enemies_on_screen': 0, 'enemy_kills': 0, 'enemy_kill_streaks': 0, 'minutes_played': 0, 'notifications': 0, 'achievements': 0}
