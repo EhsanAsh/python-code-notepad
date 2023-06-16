@@ -11,9 +11,9 @@
 
 #Everytime that you want to find out about an error you are getting, you can copy and search it in google.
 
-#We can use # to comment in python. Also, if we want to comment a block of code, we can use ''' or """ at the beginning and end of the block of code. Also, we can use ctrl + / to comment a block of code.
+#We can use # to comment in python.  Also, we can use ctrl + / to comment a block of code.
 
-#---------------------------------------------Python Components-----------------------------------------
+#---------------------------------------Python Components-------------------------------
 
 #Python, like many other programming languages, is composed of various components and parts. Here are some key components:
 
@@ -57,7 +57,7 @@
 
 #These are just some of the components and parts of Python. 
 
-#---------------------------------------------How to write codes-------------------------------------------
+#------------------------------------How to write codes----------------------------------
 
 #It's important to write our code in a way that it can be readable, clear and understandable. Also, we should use meaningful names for our variables.
 #1-We can not use space between names. We can use underscore instead of space.
@@ -71,7 +71,7 @@
 #9-Double underscore at the beginning of the variable name is used for private variables. for example: __name, etc.
 #10-Double underscore at the beginning and end of the variable name is used for special methods. for example: __init__, etc.Stuff that we should not touch.
 
-#---------------------------------------------Type&Print-------------------------------------------
+#----------------------------------------Type&Print-------------------------------------
 
 type(123) #it will tell us the type of the variable. for example: int, float, string, etc.
 #Outcome of adding an integer and a float is a float.
@@ -94,7 +94,7 @@ print('Hello World!\\Hello World!')# \\ is used to print a back slash\.
 
 print('Hello' + ' ' + 'Ehsan')
 
-#---------------------------------------------Variables-------------------------------------------
+#---------------------------------------------Variables----------------------------------
 
 #Variable is a box that we can store something in it. we can use this box later in the code. we can change the content of the box later in the code.
 #we can use the variable name in the code instead of the content of the box.
@@ -113,7 +113,7 @@ num_of_friends *= 2 #we can use *= to multiply the content of the box by 2.
 num_of_friends /= 2 #we can use /= to divide the content of the box by 2.
 friends = num_of_friends #we can assign a variable to another variable.
 
-#-----------------------------------------Most common Data types----------------------------------------
+#-----------------------------------Most common Data types------------------------------
 
 #int is a whole number. for example: 123, 0, -123, etc.
 #float is a number with a decimal point. for example: 3.14, 0.0, -3.14, etc.
@@ -123,8 +123,10 @@ friends = num_of_friends #we can assign a variable to another variable.
 #dict is a dictionary. A collection of key values. for example: {'name': 'Ehsan', 'age': 30}, etc.***It is always in curly brackets.***
 #None is a special data type. it means nothing. for example: None, etc. we can set a variable to None. for example: x = None, etc.
 
-#----------------------------------------------String-----------------------------------------------------
+#----------------------------------------------String------------------------------------
 
+#to have multiline string, we can use triple quotes like this:
+a = """Hello. My name is Ehsan. I am 30 years old. I am a software developer. I am learning python. """
 #string is a sequence of characters(like a text), it is always in quotes.
 #we can use single quotes or double quotes. but if we have a single quote in the string, we have to use double quotes and vice versa. Also we can use triple quotes.
 #we can use any character in the string.
@@ -141,6 +143,22 @@ name = 'Ehsan'
 name += 'Ash'
 #We can use += to concatenate two strings. Instead of name = name + 'Ash'.
 
+#to check the length of a string, we can use len() function.
+
+#to access a character in a string, we can use index. index starts from [0].
+name = 'Ehsan'
+print(name[0]) #it will print E.
+
+#check string:
+name = 'My name is Ehsan'
+print('Ehsan' in name) #it will return True.
+
+#slicing:
+name = 'Ehsan Ashrafipour'
+print(name[2:6]) #it will print san. it will start from index 2 and end at index 5. it will not include index 6. 
+#we can also use negative numbers. it will start from the end of the string. for example:
+print(name[-4:-1])# it will print pou.
+
 #***********
 name = 'Ehsan'
 guess = 7
@@ -152,20 +170,47 @@ print(f'Hello {name}! Your guess is {guess}.')
 print('Hello {}! Your guess is {}.'.format(name, guess))#The older way to format a string.
 print(name+' '+str(guess))#The older way to concatenate two strings.
 
-#----------------------------------------------Index-----------------------------------------------------
+#----------------String Method ------------------
+
+name = input('What is your name?\n').lower()
+# .lower() is a string method. we can use it to convert a string to lowercase.
+#.upper() is a string method. we can use it to convert a string to uppercase.
+#.capitalize() is a string method. we can use it to capitalize the first letter of a string.
+
+#to remove white spaces from the beginning and the end of a string, we can use .strip() method.
+name = ' Ehsan Ash  '
+name = name.strip()
+
+#to replace a character in a string, we can use .replace() method.
+name = name.replace('a', 'A')
+
+name = name.index('A') #it will return the index of the first character of the string. it will return an error if the character is not in the string.
+#syntax: string.index(value, start, end) #start and end are optional.
+
+name = name.find('A') #it will return the index of the first character of the string. it will return -1 if the character is not in the string. it will find the first occurance of the character.
+#syntax: string.find(value, start, end) #start and end are optional.
+
+name = name.count('A') # answer:1-- it will return the number of times that the character is in the string.
+
+name = name.split(' ') #it will split the string into a list. it will split the string by the character that we pass to the method. if we don't pass anything, it will split the string by space.
+#for example if we have cama in the string, we can split the string by cama:
+name = 'Ehsan,Ash,Shayan'
+name = name.split(',')
+
+#----------------------------------------------Index------------------------------------
 
 name = 'Ehsan'
 name[0] #it will print the first character of the string.
 #Index is the position of a character in a string. It starts from 0.
 name[-1] #it will print the last character of the string.
 
-#---------------------------------------Converting Data----------------------------------------------
+#---------------------------------Converting Data---------------------------------------
 
 float(150) #it will convert the number to a float.
 int(3.14) #it will convert the number to an integer.
 str(99) #it will convert the number to a string.
 
-#----------------------------------------------Input-----------------------------------------------------
+#----------------------------------------------Input------------------------------------
 
 input('a prompt for the user: ')
 #it will print the prompt and wait for the user to enter something. After the user entered the answer, this answer will be replaced by that statement(code).
@@ -179,12 +224,12 @@ length = temp
 print(name,length)
 #By using this code, we can swap the content of the boxes.
 
-#----------------------------------------------Hint-----------------------------------------------------
+#----------------------------------------------Hint--------------------------------------
 
 name = input()
 #an empty input is a falsy value. here it will give the user a chance to enter the answer again or a cursor.
 
-#-----------------------------------------Function types-------------------------------------------------
+#-------------------------------Function types------------------------------------------
 
 print() #it is a built-in function. we can use it to print something.
 input() #it is a built-in function. we can use it to get input from the user.
@@ -196,7 +241,7 @@ str() #it is a built-in function. we can use it to convert a number to a string.
 help() #it is a built-in function. we can use it to find out how to use a specific method.
 round(thing to round , how many decimal points to rount it to) #it is a built-in function. we can use it to round a number.
 
-#--------------------------------------Conditional Statements------------------------------------------
+#-----------------------------------Conditional Statements-------------------------------
 
 #Conditional statements are used to make decisions. we can use if, elif, else to make decisions.
 if some condition is true:
@@ -230,7 +275,21 @@ if answer:
 # if we want to check if answer is true or not:
 if answer == True: 
     
-#--------------------------------------Comparison Operaters------------------------------------------
+print("Correct") if 5>2 else print("Incorrect")
+#We can use if else in one line. It's called ternary operator. It's like a SHORT HAND for if else statement.
+
+#not:
+a = 200
+b = 33
+if not b > a:
+  print("b is greater than a")
+  
+#pass statement:
+if x < 0:
+        pass
+#We can use pass statement to avoid getting an error. It means that we don't want to do anything.we can use it if for some reason we want to have an empty code block.
+    
+#-------------------------------Comparison Operaters------------------------------------
 
 #We can use comparison operators to compare two values.
 #We use them anywhere that we want to compare two values. Like inside if or elif statements.
@@ -238,7 +297,7 @@ if answer == True:
 #we can use != to compare two values. for example: 1 != 1, 1 != 2, etc. it means that they are not equal.
 # a > b, a < b, a >= b, a<=b. It means that a is greater than b, a is less than b, a is greater than or equal to b, a is less than or equal to b.
 
-#-----------------------------------------Logical Operaters--------------------------------------------
+#---------------------------------------Logical Operaters-------------------------------
 
 age>2 and age<8 #it will return True if both of the conditions are true. True and True = True, True and False = False, False and True = False, False and False = False.
 
@@ -248,7 +307,7 @@ not ((age>2 and age<=8) or age>=65) #it will return True if the condition is fal
 #Logical operators are used to combine conditional statements. We can use not, and, or to combine conditional statements.
 #Logical are used to make boolean, logical comparisons or statements.
 
-#------------------------------------------is VS. == -------------------------------------------------------
+#-----------------------------------is VS. == -----------------------------------------
 
 a=[1,2,3]
 b=[1,2,3]
@@ -256,7 +315,7 @@ a==b #it will return True. It means that the values of a and b are equal.
 a is b #it will return False. It means that a and b are not the same object. They are two different objects that have the same value. They are two different boxes that have the same content, and their place in the memory is different.
 #We can use is to check if two variables are the same object or not. We can use == to check if two variables have the same value or not.
 
-#------------------------------------------randint() -------------------------------------------------------
+#-----------------------------------randint() -------------------------------------------
 
 #The randint() method returns an integer number selected element from the specified range. The range includes both numbers.
 #We can use randint() to generate a random number.
@@ -270,14 +329,7 @@ from random import randint
 randint(start,stop)
 # In this case we don't have to use random. we can use randint() directly.
 
-#------------------------------------------String Method -------------------------------------------------------
-
-name = input('What is your name?\n').lower()
-# .lower() is a string method. we can use it to convert a string to lowercase.
-#.upper() is a string method. we can use it to convert a string to uppercase.
-#.capitalize() is a string method. we can use it to capitalize the first letter of a string.
-
-#-----------------------------------------For Loops ------------------------------------------------------
+#--------------------------------For Loops -----------------------------------------
 for item in iterable_object:
     #do something with item
     #an iterable object is a collection of items. for example: list, string, etc.
@@ -305,8 +357,31 @@ from emoji import emojize
 for repeat in range(3):
     for emoji in range(1, 11):
         print(emojize(':grinning_face:'*emoji))
+        
+#break:
+for x in range(1, 11):
+    if x == 7:
+        break
+    print(x)
+#It will break the loop when x is equal to 7. It will not print 7.
+
+#continue: with the continue statement we can stop the current iteration of the loop, and continue with the next.
+for x in range(1, 11):
+    if x == 7:
+        continue
+    print(x)
+#It will skip 7 and continue with the next iteration.
+
+for x in range(1, 11):
+    if x == 7:
+        continue
+    print(x)
+else:
+    print('Loop finished')
+#else will run after the loop is finished.
+#if we use break, else will not run.
     
-    #---------------------------------------Import and use Emojis -------------------------------------------
+    #-------------------------------Import and use Emojis -------------------------------
     
     #We can use emojis in python. we have to install and import emoji first.
     #to install: pip3 install emoji
@@ -320,7 +395,7 @@ for repeat in range(3):
     #pip install --upgrade emoji
     #"/c/Users/ehsan/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/python.exe" -m pip install --upgrade pip
     
-    #---------------------------------------Hint-----------------------------------------------------------
+    #---------------------------------------Hint----------------------------------------
     
     # if you see that you are repeating a function too many times, you may can use sth else.
     #for example:
@@ -343,7 +418,7 @@ for x in range(1, 21):
         state = 'Odd'
     print(f'{x} is {state} number. :)')
     
-    #-----------------------------------------While Loops ------------------------------------------------------
+    #-----------------------------------------While Loops ------------------------------
     
     while some condition is true:
     #do something
