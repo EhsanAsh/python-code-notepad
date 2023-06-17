@@ -723,6 +723,9 @@ developer2 = dict(name='Ehsan', age=30, is_developer=True, favorite_number=77)
 #if we want to access a value in a dictionary, we can use the key. Like a dictionary, we can use the key to access the value.
 developer['name'] # it will return Ehsan.
 
+developer['name'] = 'Arash' # it will change the value of name to Arash.
+developer['education'] = 'Master' # it will add education to the dictionary.
+
 #********Looping over a dictionary:********
 
 #for above dictionary:
@@ -772,3 +775,14 @@ game_properties = ["current_score", "high_score", "number_of_lives", "items_in_i
 initial_game_state = dict.fromkeys(game_properties, 0)
 print(initial_game_state)
 # answer: {'current_score': 0, 'high_score': 0, 'number_of_lives': 0, 'items_in_inventory': 0, 'power_ups': 0, 'ammo': 0, 'enemies_on_screen': 0, 'enemy_kills': 0, 'enemy_kill_streaks': 0, 'minutes_played': 0, 'notifications': 0, 'achievements': 0}
+#***********************
+
+#to remove a specific value from a dictionary:
+
+Jeep_info = {'name': 'Jeep Wrangler', 'color': 'Surge Green', 'year': 2022, 'milage': 8756.77, 'Brand new':False}
+remove = Jeep_info.pop('milage') # it will remove the value of milage and return it. answer is: 8756.77
+
+Jeep_info.popitem() # it will remove the last item and return it. answer is: ('Brand new', False)
+
+Jeep_info2 = dict(engine='2000 cc')
+Jeep_info2.update(Jeep_info) # it will add Jeep_info to Jeep_info2. answer is: {'engine': '2000 cc', 'name': 'Jeep Wrangler', 'color': 'Surge Green', 'year': 2022, 'Brand new': False}
