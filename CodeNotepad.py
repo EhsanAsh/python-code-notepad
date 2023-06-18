@@ -786,3 +786,51 @@ Jeep_info.popitem() # it will remove the last item and return it. answer is: ('B
 
 Jeep_info2 = dict(engine='2000 cc')
 Jeep_info2.update(Jeep_info) # it will add Jeep_info to Jeep_info2. answer is: {'engine': '2000 cc', 'name': 'Jeep Wrangler', 'color': 'Surge Green', 'year': 2022, 'Brand new': False}
+
+#*****Example for nested lists and dictionaries:*****
+
+playlist = dict(
+    title='Best Persian Songs', author='EhsanAsh', songs=[
+        {'title': 'Abr mibarad', 'artist': [
+            'Shajaryan'], 'albume':'Asrar', 'duration':5.5, },
+        {'title': 'Vatan', 'artist': ['Nazeri'],
+            'albume':'Iran', 'duration':4, },
+        {'title': 'Roozagar', 'artist': [
+            'Ghorbani'], 'albume':'Gharibaneh', 'duration':2.5, },
+        {'title': 'Madhoosh', 'artist': [
+            'Neikpay'], 'albume':'Barayat', 'duration':3.6, }
+    ]
+)
+total_duration = 0
+for song in playlist['songs']:
+    total_duration += song['duration']
+print(total_duration)
+#***************************************
+
+#----------------------------Dictionary comprehension------------------------------
+
+#Syntax: {___:___ for ___ in ___}
+#It can iterate over keys by default.
+#to iterate over values, we have to use .values() method.
+#to iterate over keys and values, we have to use .items() method.
+
+numbers = dict(first = 1, second = 2, third = 3)
+squared_numbers= {key:value**2 for key,value in numbers.items()}
+
+{num:num*2 for num in [1,2,3,4,5,6]} #answer: {1: 2, 2: 4, 3: 6, 4: 8, 5: 10, 6: 12}
+
+str1 = 'ABC'
+str2= '123'
+combo = {str1[i]:str2[i] for i in range(0, len(str1))} #answer: {'A': '1', 'B': '2', 'C': '3'}
+
+Jeep_info = {'name': 'Jeep Wrangler', 'color': 'Surge Green', 'year': 2022}
+upper = {key:value.upper() for key,value in Jeep_info.items()}
+#or:
+upper = {k.upper():v.upper() for k,v in Jeep_info.items()}
+
+#************Conditional Logic with Dictionaries:
+
+state = {num:('even' if num % 2 ==0 else 'odd') for num in range(1,10)} #answer: {1: 'odd', 2: 'even', 3: 'odd', 4: 'even', 5: 'odd', 6: 'even', 7: 'odd', 8: 'even', 9: 'odd'}
+
+Jeep_info = {'name': 'Jeep Wrangler', 'color': 'Surge Green', 'year': 2022}
+upper = {(key.upper() if key is 'color' else key):value.upper() for key,value in Jeep_info.items()}
