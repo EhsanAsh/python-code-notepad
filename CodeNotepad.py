@@ -123,6 +123,16 @@ friends = num_of_friends #we can assign a variable to another variable.
 #dict is a dictionary. A collection of key values. for example: {'name': 'Ehsan', 'age': 30}, etc.***It is always in curly brackets.***
 #None is a special data type. it means nothing. for example: None, etc. we can set a variable to None. for example: x = None, etc.
 
+#------------------------Global Keyword----------------------------------------------
+
+def  my_func():
+    global x
+    x='hello'
+my_func()
+print(x)
+# by using global keyword, we can change the value of a variable outside of the function. for example: we can change the value of x inside the function and print it outside of the function.
+#we use def when we want to define a function. we use global when we want to change the value of a variable outside of the function.
+
 #----------------------------------------------String------------------------------------
 
 #to have multiline string, we can use triple quotes like this:
@@ -144,6 +154,22 @@ name += 'Ash'
 #We can use += to concatenate two strings. Instead of name = name + 'Ash'.
 
 #to check the length of a string, we can use len() function.
+name = 'Ehsan'
+print(len(name)) #it will print 5. it will count the number of characters in the string.
+
+name, age, city = 'Ehsan', 30, 'Toronto'
+name=middle_name=last='Ehsan'
+
+first= 'Hello'
+name = 'Ehsan'
+sign = '!'
+print(first + ' ' + name + sign) #it will print Hello Ehsan!
+#or
+print(first, name, sign) #it will print Hello Ehsan!
+#the difference is that when we use commo it will add a space between the variables and we can use any data type. but when we use +, we have to convert the number to a string first.
+fruits = ['apple', 'banana', 'orange']
+first, second, third = fruits
+#we can assign multiple variables at once. we can use this method to assign multiple variables to a list.
 
 #to access a character in a string, we can use index. index starts from [0].
 name = 'Ehsan'
@@ -159,7 +185,7 @@ print(name[2:6]) #it will print san. it will start from index 2 and end at index
 #we can also use negative numbers. it will start from the end of the string. for example:
 print(name[-4:-1])# it will print pou.
 
-#***********
+#*****string format******
 name = 'Ehsan'
 guess = 7
 print(f'Hello {name}! Your guess is {guess}.')
@@ -168,6 +194,9 @@ print(f'Hello {name}! Your guess is {guess}.')
 #interpolation is used to put a variable inside a string. we can use f to format a string. we can use {} to put a variable inside the string.
 #We call a variable inside a string, a placeholder.
 print('Hello {}! Your guess is {}.'.format(name, guess))#The older way to format a string.
+#when we are using .format(), if we want to define number of decimals for a float, we can use :.2f. for example:
+print('Hello {}! Your guess is {:.2f}.'.format(name, guess))#It will print 7.00.
+
 print(name+' '+str(guess))#The older way to concatenate two strings.
 
 #----------------String Method ------------------
@@ -195,7 +224,7 @@ name = name.count('A') # answer:1-- it will return the number of times that the 
 name = name.split(' ') #it will split the string into a list. it will split the string by the character that we pass to the method. if we don't pass anything, it will split the string by space.
 #for example if we have cama in the string, we can split the string by cama:
 name = 'Ehsan,Ash,Shayan'
-name = name.split(',')
+name = name.split(',') # answer: ['Ehsan', 'Ash', 'Shayan']
 
 #----------------------------------------------Index------------------------------------
 
@@ -209,6 +238,30 @@ name[-1] #it will print the last character of the string.
 float(150) #it will convert the number to a float.
 int(3.14) #it will convert the number to an integer.
 str(99) #it will convert the number to a string.
+
+#----------------------------Evaluate Expressions---------------------------------------
+
+#we can use in to check if a character is in a string or not.
+#we can use not in to check if a character is not in a string or not.
+#in and not in are membership operators.
+
+#we can use == to check if two values are equal or not.
+#we can use != to check if two values are not equal or not.
+
+# all comparison operators return boolean values. for example: True or False.
+
+# by using and, or, not we can combine boolean values. for example: True and True = True, True and False = False, False and True = False, False and False = False.
+#we can use not to check if a boolean value is false or not. for example: not True = False, not False = True.
+
+#we can use is to check if two variables are the same object or not(if they are actually same objects with same location in memory). for example: 1 is 1, 1 is 2, etc. 
+#we can use is not to check if two variables are not the same object or not. for example: 1 is not 1, 1 is not 2, etc.
+#is and is not are identity operators.
+
+#we can use bool() to check if a value is true or false. for example: bool(0), bool(1), bool(''), bool('Ehsan'), etc. 0, None, False, empty string, empty list, empty dictionary, empty set are false. everything else is true.
+
+# we can use isinstance() to check if a value is a specific type or not. for example: isinstance(1, int), isinstance(1, float), etc. it will return True or False.
+x=200
+print(isinstance(x, int)) #it will return True.
 
 #----------------------------------------------Input------------------------------------
 
