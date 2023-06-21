@@ -123,6 +123,15 @@ friends = num_of_friends #we can assign a variable to another variable.
 #dict is a dictionary. A collection of key values. for example: {'name': 'Ehsan', 'age': 30}, etc.***It is always in curly brackets.***
 #None is a special data type. it means nothing. for example: None, etc. we can set a variable to None. for example: x = None, etc.
 
+#----------------Hint----------------
+
+"""There are four collection data types in the Python programming language:
+
+**List: is a collection which is ordered and changeable. Allows duplicate members.
+**Tuple: is a collection which is ordered and unchangeable. Allows duplicate members.
+**Set: is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+**Dictionary: is a collection which is ordered** and changeable. No duplicate members."""
+
 #------------------------Global Keyword----------------------------------------------
 
 def  my_func():
@@ -516,7 +525,7 @@ for x in range(1,101):
     if x==7:
         break
     
-#-----------------------------------------Nice Example------------------------------------------------------
+#-------------------------------------Nice Example--------------------------------------
 
 repeat = input('Hey how is it going?\n').lower()
 while repeat != 'stop copying me':
@@ -532,7 +541,7 @@ for angry in range(angry):
     
 #******check the guessing_game.py file for a nice example.******
 
-#-----------------------------------------List------------------------------------------------------
+#-----------------------------------------List-------------------------------------------
 
 #List is a collection of items. It is always in square brackets and items are separated by commas.
 #List is iterable. we can use the content of the box repeatedly in the code, and Changeable. we can change the content of the box later in the code.
@@ -818,6 +827,10 @@ new = dict.fromkeys(['name', 'age', 'is_developer'], 'unknown') # we can also us
 new2 = dict.fromkeys(range(1,10), None)# answer is: {1: None, 2: None, 3: None, 4: None, 5: None, 6: None, 7: None, 8: None, 9: None}
 #we can use range too.
 
+key1= developer.keys() # it will return dict_keys(['name', 'age', 'is_developer', 77])
+val1= developer.values() # it will return dict_values(['Ehsan', 30, True, 'my favorite number'])
+items1= developer.items() # it will return dict_items([('name', 'Ehsan'), ('age', 30), ('is_developer', True), (77, 'my favorite number')])
+
 retrieve = developer.get('name') # it will return Ehsan.
 #.get() method:
 #get() method is used to retrieve a key. it will return None if the key does not exist.
@@ -839,6 +852,9 @@ Jeep_info.popitem() # it will remove the last item and return it. answer is: ('B
 
 Jeep_info2 = dict(engine='2000 cc')
 Jeep_info2.update(Jeep_info) # it will add Jeep_info to Jeep_info2. answer is: {'engine': '2000 cc', 'name': 'Jeep Wrangler', 'color': 'Surge Green', 'year': 2022, 'Brand new': False}
+
+#we can also use update to add a new key value pair to a dictionary.
+Jeep_info.update({'milage': 8756.77}) # it will add milage to Jeep_info. answer is: {'name': 'Jeep Wrangler', 'color': 'Surge Green', 'year': 2022, 'Brand new': False, 'milage': 8756.77}
 
 #*****Example for nested lists and dictionaries:*****
 
