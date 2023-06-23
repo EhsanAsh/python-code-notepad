@@ -194,6 +194,11 @@ print(name[2:6]) #it will print san. it will start from index 2 and end at index
 #we can also use negative numbers. it will start from the end of the string. for example:
 print(name[-4:-1])# it will print pou.
 
+#******Important******
+
+#we cab also use len():
+name = name[0:len(name)] #it will print Ehsan Ashrafipour.
+
 #*****string format******
 name = 'Ehsan'
 guess = 7
@@ -215,9 +220,13 @@ name = input('What is your name?\n').lower()
 #.upper() is a string method. we can use it to convert a string to uppercase.
 #.capitalize() is a string method. we can use it to capitalize the first letter of a string.
 
+name = name.title() #it will capitalize the first letter of each word in a string.
+
 #to remove white spaces from the beginning and the end of a string, we can use .strip() method.
 name = ' Ehsan Ash  '
 name = name.strip()
+#we can also use carrecter inside the .strip() method. for example:
+name = name.strip('E,.-') #it will remove E, . and - from the beginning and the end of the string.
 
 #to replace a character in a string, we can use .replace() method.
 name = name.replace('a', 'A')
@@ -227,6 +236,7 @@ name = name.index('A') #it will return the index of the first character of the s
 
 name = name.find('A') #it will return the index of the first character of the string. it will return -1 if the character is not in the string. it will find the first occurance of the character.
 #syntax: string.find(value, start, end) #start and end are optional.
+name = name.find('A',2,5)#it will return -1 if the character is not in the string. it will find the first occurance of the character between index 2 and 5.
 
 name = name.count('A') # answer:1-- it will return the number of times that the character is in the string.
 
@@ -903,3 +913,104 @@ state = {num:('even' if num % 2 ==0 else 'odd') for num in range(1,10)} #answer:
 
 Jeep_info = {'name': 'Jeep Wrangler', 'color': 'Surge Green', 'year': 2022}
 upper = {(key.upper() if key is 'color' else key):value.upper() for key,value in Jeep_info.items()}
+
+#---------------------------------Tuples---------------------------------
+
+num = (1,2,3)
+#Tuples like lists are ordered collection or grouping of items and indexed. we can use index to access items in a tuple.
+#we can give a tuple any kind of data type. it can be a list, a dictionary, a tuple, etc.
+#but unlike lists, tuples are immutable. we can not change the content of a tuple once it's created.
+#we can not add or remove items from a tuple.
+alphabet = ('a','b','c','d','e','f','g','h','i','j','k','l','m','n')
+
+#Tuples are faster and lighter than lists. so if we don't need to change the content of a list, we can use tuple instead of list.
+#it makes our code more secure. because we can not change the content of a tuple by mistake.
+#we can use tuple as a key in a dictionary. but we can not use a list as a key in a dictionary.
+
+#we can use tuple() to convert a list to a tuple.
+#we can have duplicate values in a tuple.
+num2 = tuple([1,2,3,4,5,6,7,8,9,9,9,9,9,9,9,9,9])
+
+#to access data in a tuple(like the others):
+alphabet[0] # it will return a.
+
+locations = {
+    (35.6895, 39.6917): 'Toronto Office',
+    (40.7128, 74.0060): 'New York Office',
+    (37.7749, 122.4194): 'Shiraz Office'
+}
+
+#in some situations when we use a method it will return a tuple. for example:
+
+friends = {
+    'Ehsan': (40, 'Toronto'),
+    'Amir': (30, 'Shiraz'),
+    'Reza': (35, 'Tehran')
+}
+friends.items() # answer: dict_items([('Ehsan', (40, 'Toronto')), ('Amir', (30, 'Shiraz')), ('Reza', (35, 'Tehran'))])
+#the reason is that we do not need to change the result. so it's better to use tuple instead of list.
+
+#******Looping over a tuple:******
+
+months = ('January','February','March','April','May','June','July','August','September','October','November','December')
+
+for month in months:
+    print(month)
+#it just iterates over the tuple and prints the items.
+
+#to print them backwards using a while loop:
+i = len(months) - 1 #it's the index of the last item in the tuple. we could also use index:
+i = months.index('December')
+while i >= 0:
+    print(months[i])
+    i -= 1
+    
+#********Tuple Methods:********
+
+num = (1,2,3,4,5,6,7,8,9,9,9,9,9,9,9,9,9)
+num.count(9) # it will return 9. it will count how many times 9 is in the tuple.
+
+num.index(9) # it will return 8. it will return the index of the first 9 in the tuple.
+num.index(9, 9) # it will return 9. it will return the index of the first 9 in the tuple, starting from index 9. the second value is the starting index.
+
+#nested tuples:
+letters = ('a','b','c',('d','e','f','g','h','i','j'),'k','l','m','n')
+letters[3]# it will return ('d', 'e', 'f', 'g', 'h', 'i', 'j')
+letters[3][2] # it will return f
+
+#slice:
+letters[3][2:5] # it will return ('f', 'g', 'h')
+letters[1:7:2]# it will return ('b', ('d', 'e', 'f', 'g', 'h', 'i', 'j'), 'l')
+
+#----------------------------------------Sets----------------------------------------
+
+#Sets are unordered collection of unique objects(not duplicated). It is always in curly brackets.
+#they are like formal mathematical sets.
+#they don't have duplicate values.
+#we can use groupe of different data types in a set.
+#we can not reach an item in a set by index. we can not use index to access items in a set because they are unordered.
+#sets are iterable and mutable.
+#sets are like dictionaries but without values. they are just keys and like lists but unordered and without duplicate values.
+#sets can be useful if you need to keep track of a collection of elements, but don't care about ordering, keys or values and duplicates.
+
+num = {1,4,7,9}
+#or
+num = set({1,4,7,9})
+4 in num # it will return True.
+10 in num # it will return False.
+
+e = {5,2,8.25,'a'}
+for val in e:
+    print(val)
+    
+#commom uses of sets:
+cities = ['Toronto','New York','Toronto','Shiraz','Tehran','Shiraz','Abadan', 'New York', 'Tehran','Abadan']
+
+#Turning a list into a set will remove the duplicates:
+unique_cities = set(cities) # answer: {'Toronto', 'New York', 'Shiraz', 'Abadan', 'Tehran'}
+
+#we can turn that set to a list again, thus we can remove the duplicates from the list and then turn it to an ordered list:
+unique_cities = list(set(cities)) # answer: ['Toronto', 'New York', 'Shiraz', 'Abadan', 'Tehran']
+
+#if we want to know how many unique cities we have, we can use len():
+unique_cities = len(set(cities)) # answer: 5
