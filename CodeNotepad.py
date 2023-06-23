@@ -453,7 +453,7 @@ else:
 #else will run after the loop is finished.
 #if we use break, else will not run.
     
-    #-------------------------------Import and use Emojis -------------------------------
+#-------------------------------Import and use Emojis -------------------------------
     
     #We can use emojis in python. we have to install and import emoji first.
     #to install: pip3 install emoji
@@ -467,7 +467,7 @@ else:
     #pip install --upgrade emoji
     #"/c/Users/ehsan/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/python.exe" -m pip install --upgrade pip
     
-    #---------------------------------------Hint----------------------------------------
+#---------------------------------------Hint----------------------------------------
     
     # if you see that you are repeating a function too many times, you may can use sth else.
     #for example:
@@ -620,7 +620,7 @@ for n in names:
     result += n.upper()
 #in every loop it will add one of names to result in uppercase
 
-#-----------------------------------------------List Methods--------------------------------------------
+#--------------------------------------------List Methods-----------------------------------------
 
 #Methods: Methods are like functions, but they're associated with object/classes. Methods in objects are functions that belong to the object.
 
