@@ -1016,7 +1016,7 @@ del num # it will delete the variable num.
 #they don't have duplicate values.
 #we can use groupe of different data types in a set.
 #we can not reach an item in a set by index. we can not use index to access items in a set because they are unordered.
-#sets are iterable and mutable.
+#sets are iterable and unchangeable.
 #sets are like dictionaries but without values. they are just keys and like lists but unordered and without duplicate values.
 #sets can be useful if you need to keep track of a collection of elements, but don't care about ordering, keys or values and duplicates.
 
@@ -1041,3 +1041,65 @@ unique_cities = list(set(cities)) # answer: ['Toronto', 'New York', 'Shiraz', 'A
 
 #if we want to know how many unique cities we have, we can use len():
 unique_cities = len(set(cities)) # answer: 5
+
+#-----------------Set Methods-----------------
+
+#to add a value to a set:
+cities = {'Toronto','New York','Shiraz','Tehran','Abadan'}
+cities.add('Isfahan') # it will add Isfahan to the set.
+
+#to add another set to a set:
+cities.update({'Vancouver','Montreal'}) # it will add Vancouver and Montreal to the set.
+#or:
+cities2 = {'Vancouver','Montreal','Isfahan'}
+cities.update(cities2) # it will add Vancouver, Montreal and Isfahan to the set.
+#the objest in the parentheses should be iterable it means that we can use a list, a tuple, a string, etc.
+cities3 = ['Vancouver','Montreal','Isfahan']
+cities.update(cities3) # it will add Vancouver, Montreal and Isfahan to the set.
+
+#we can add a set to a set by:
+cities4 = cities.union(cities2) # it will add cities2 to cities and store it in cities4. they are equal but they are two different objects.
+#the difference between update and union is that update will change the original set but union will not change the original set it will just return a new set as we saw in the example above.
+
+#to select objects that are in both sets:
+cities = {'Toronto','New York','Shiraz','Tehran','Abadan'}
+cities2 = {'Vancouver','Montreal','Isfahan','Toronto','New York'}
+cities.intersection_update(cities2) # it will select the objects that are in both sets and store it in cities_x: {'Toronto', 'New York'}
+
+#to store the objects that are in both sets in a new set:
+cities_x = cities.intersection(cities2) # it will select the objects that are in both sets and store it in cities_x: {'Toronto', 'New York'}
+
+#to keep the objects that are not in both sets:
+cities.symmetric_difference_update(cities2) # it will keep the objects that are not in both sets and store it in cities: {'Shiraz', 'Abadan', 'Isfahan', 'Montreal', 'Vancouver', 'Tehran'}
+
+#to store the objects that are not in both sets in a new set:
+cities_y = cities.symmetric_difference(cities2) # it will keep the objects that are not in both sets and store it in cities_y: {'Shiraz', 'Abadan', 'Isfahan', 'Montreal', 'Vancouver', 'Tehran'}
+
+#to remove a value from a set:
+cities.remove('Isfahan') # it will remove Isfahan from the set. if the value does not exist, it will return an error.
+
+#there is another way to remove a value from a set:
+cities.discard('Isfahan') # it will remove Isfahan from the set. if the value does not exist, it will not return an error.
+
+#to remove a random value from a set:
+cities.pop() # it will remove a random value from the set.
+
+#to remove all the values from a set:
+cities.clear() # it will remove all the values from the set.
+
+#to delte a set:
+del cities # it will delete the set.
+
+#to copy a set:
+cities2 = cities.copy() # it will copy the set and store it in cities2. they are equal but they are two different objects.
+
+#-------------------------------Set Comprehenstion--------------------------
+
+#Syntax: {___ for ___ in ___}
+#it can be used to remove duplicates from a list.
+#it's like list comprehension but it returns a set and with curly brackets.
+
+{char.upper() for char in 'hello'} # answer: {'H', 'E', 'L', 'O'}, it will remove the duplicates and return it without any order.
+
+#set comprehention is usful when converting other data types to sets.
+
