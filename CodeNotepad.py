@@ -306,7 +306,7 @@ name = input()
 #-----------------------------------Conditional Statements-------------------------------
 
 #Conditional statements are used to make decisions. we can use if, elif, else to make decisions.
-if some condition is true:
+if some_condition is True:
     #do something
     #we can call values that are true, truthy and values that are false, falsy.
     #the code inside the if statement is called a code block.
@@ -544,7 +544,7 @@ for angry in range(angry):
 #-----------------------------------------List-------------------------------------------
 
 #List is a collection of items. It is always in square brackets and items are separated by commas.
-#List is iterable. we can use the content of the box repeatedly in the code, and Changeable. we can change the content of the box later in the code.
+#List is iterable, changeable, ordered and allows duplicate members and can have different data types.
 #List can be assigned to other lists.
 
 #List can have different data types. such as: int, float, string, list, etc.
@@ -769,14 +769,14 @@ for num in nested_list:
 #*********************Dictionaries******************************#
 
 #Dictionary is a collection of key value pairs. It is always in curly brackets.
+#Dictionary is iterable, changeable, unordered and does not allow duplicate members and can have different data types.
+#we can use any data type for values but for keys we mostly use strings and numbers and tuples.
 
 developer = {'name': 'Ehsan', 'age': 30, 'is_developer': True, 77: 'my favorite number'}
 #name, age, is_developer are keys and Ehsan, 30, True are values.
 #keys are unique. we can not have two keys with the same name.
 #keys are immutable. we can not use a list as a key. we can use a tuple as a key.
 #values can be anything. they can be mutable or immutable. they can be a list, a dictionary, a tuple, etc.
-#like lists, dictionaries are iterable and changeable.
-#we can use any data type for values but for keys we mostly use strings and numbers.
 
 # There is another way to create a dictionary:
 developer2 = dict(name='Ehsan', age=30, is_developer=True, favorite_number=77)
@@ -906,10 +906,11 @@ upper = {(key.upper() if key is 'color' else key):value.upper() for key,value in
 
 #---------------------------------Tuples---------------------------------
 
+#tuple is itreable, immutable(unchangeable), ordered and allows duplicate members and can have different data types.
+
 num = (1,2,3)
 #Tuples like lists are ordered collection or grouping of items and indexed. we can use index to access items in a tuple.
 #we can give a tuple any kind of data type. it can be a list, a dictionary, a tuple, etc.
-#but unlike lists, tuples are immutable. we can not change the content of a tuple once it's created.
 #we can not add or remove items from a tuple.
 alphabet = ('a','b','c','d','e','f','g','h','i','j','k','l','m','n')
 
@@ -999,12 +1000,11 @@ del num # it will delete the variable num.
 
 #----------------------------------------Sets----------------------------------------
 
+#Sets are iterable, unchangeable, unordered and does not allow duplicate members and can have different data types.
+
 #Sets are unordered collection of unique objects(not duplicated). It is always in curly brackets.
-#they are like formal mathematical sets.
 #they don't have duplicate values.
-#we can use groupe of different data types in a set.
 #we can not reach an item in a set by index. we can not use index to access items in a set because they are unordered.
-#sets are iterable and unchangeable.
 #sets are like dictionaries but without values. they are just keys and like lists but unordered and without duplicate values.
 #sets can be useful if you need to keep track of a collection of elements, but don't care about ordering, keys or values and duplicates.
 
