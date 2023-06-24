@@ -222,6 +222,8 @@ name = input('What is your name?\n').lower()
 
 name = name.title() #it will capitalize the first letter of each word in a string.
 
+if name.isalpha(): #it will return True if the string is all alphabets. it will return False if the string is not all alphabets.
+
 #to remove white spaces from the beginning and the end of a string, we can use .strip() method.
 name = ' Ehsan Ash  '
 name = name.strip()
@@ -620,7 +622,7 @@ for n in names:
     result += n.upper()
 #in every loop it will add one of names to result in uppercase
 
-#--------------------------------------------List Methods-----------------------------------------
+#--------------List Methods-------------------
 
 #Methods: Methods are like functions, but they're associated with object/classes. Methods in objects are functions that belong to the object.
 
@@ -923,6 +925,9 @@ num = (1,2,3)
 #we can not add or remove items from a tuple.
 alphabet = ('a','b','c','d','e','f','g','h','i','j','k','l','m','n')
 
+#if we want to just add one value to a tuple, we have to use comma after the value.
+seasons = ('spring',) # it will be a tuple. if we don't use comma, it will be a string.
+
 #Tuples are faster and lighter than lists. so if we don't need to change the content of a list, we can use tuple instead of list.
 #it makes our code more secure. because we can not change the content of a tuple by mistake.
 #we can use tuple as a key in a dictionary. but we can not use a list as a key in a dictionary.
@@ -978,9 +983,31 @@ letters = ('a','b','c',('d','e','f','g','h','i','j'),'k','l','m','n')
 letters[3]# it will return ('d', 'e', 'f', 'g', 'h', 'i', 'j')
 letters[3][2] # it will return f
 
+#to unpack a tuple:
+name = ('Ehsan', 'Ash', 'Shayan', 'Reza', 'Amir')
+(first, second, third) = name#answer: it will return an error because we have 5 items in the tuple but we have just 3 variables.
+#we can use * to unpack a tuple:
+(first, second, *other) = name # it will return 'Ehsan' 'Ash' ['Shayan', 'Reza', 'Amir'] 
+#or:
+first  = name[0]
+second = name[1]
+third  = name[2]
+#or:
+#we can use for loop to unpack a tuple:
+for x in name:
+    print(x)
+
 #slice:
 letters[3][2:5] # it will return ('f', 'g', 'h')
 letters[1:7:2]# it will return ('b', ('d', 'e', 'f', 'g', 'h', 'i', 'j'), 'l')
+
+#----------------Hint----------------
+
+#by using del method we can delete a variable of any data type for example:
+num = [1,2,3,4,5,6,7,8,9,9,9,9,9,9,9,9,9]
+del num # it will delete the variable num.
+
+#we can access any kind of value in any kind of data type with for loop
 
 #----------------------------------------Sets----------------------------------------
 
